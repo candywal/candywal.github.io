@@ -1,1 +1,1 @@
-on a training arc
+on a training arc.
