@@ -47,7 +47,7 @@ body, html {
     left: 5%;
     transform: translateY(-50%);
     width: auto;
-    max-width: 800px;
+    max-width: 900px;
     z-index: 2;
     background-color: rgba(207, 219, 209, 0.9);
     padding: 2rem;
