@@ -1,0 +1,149 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    height: 100%;
+    overflow: hidden;
+    background-color: #CFDBD1;
+    color: #8E9F8C;
+}
+
+#game-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0.5;
+}
+
+#game-ui {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    z-index: 2;
+    color: #BFA58A;
+    font-family: Arial, sans-serif;
+    text-align: right;
+    display: none;
+}
+
+#game-over {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    text-align: right;
+    color: #BFA58A;
+    font-family: Arial, sans-serif;
+    display: none;
+    z-index: 3;
+}
+
+#content {
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    transform: translateY(-50%);
+    width: auto;
+    max-width: 900px;
+    z-index: 2;
+    background-color: rgba(207, 219, 209, 0.9);
+    padding: 2.5rem;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+#profile-pic-container {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    margin-bottom: 1.5rem;
+    float: left;
+    margin-right: 2.5rem;
+}
+
+#profile-pic {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: 3px solid #A7B9A5;
+    border-radius: 50%;
+}
+
+#profile-pic-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(207, 219, 209, 0.1);
+    border-radius: 50%;
+}
+
+h1 {
+    color: #8E6E5D;
+    font-size: 3.5rem;
+    margin-bottom: 0.75rem;
+    white-space: nowrap;
+}
+
+p {
+    font-size: 1.5rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    color: #5A6B58;
+}
+
+.links {
+    margin-bottom: 1.5rem;
+    clear: both;
+}
+
+.links a {
+    margin-right: 15px;
+    text-decoration: none;
+    color: #A38E7B;
+    transition: color 0.3s ease;
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+.links a:hover {
+    color: #8E6E5D;
+}
+
+@media (max-width: 900px) {
+    #content {
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 1.5rem;
+        width: 95%;
+    }
+
+    #profile-pic-container {
+        float: none;
+        margin: 0 auto 1.5rem;
+    }
+
+    h1 {
+        font-size: 2.8rem;
+        text-align: center;
+        white-space: normal;
+    }
+
+    p {
+        font-size: 1.3rem;
+    }
+
+    .links {
+        text-align: center;
+    }
+
+    .links a {
+        font-size: 1.2rem;
+        margin-bottom: 0.5rem;
+        display: inline-block;
+    }
+}
