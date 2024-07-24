@@ -6,4 +6,5 @@ TODO:
 - [ ] improve the style
 - [ ] add a blog
 - [ ] add a dark mode toggle
-- [ ] 
+- [ ] make it so that the guys behing the div give you more points
+- [ ] add powerups and other possible points (maybe if you shoot squares behind the div)
