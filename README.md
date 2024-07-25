@@ -2,12 +2,14 @@ TODO:
 - [ ] Make it work on Mobile
 - [ ] Make enemies chase you
 - [ ] Log peoples scores
-- [ ] Log mroe analytic data about people
-- [ ] improve the style
-- [ ] add a blog
-- [ ] add a dark mode toggle
-- [ ] make it so that the guys behing the div give you more points
-- [ ] add powerups and other possible points (maybe if you shoot squares behind the div)
-- [ ] press any key to continue
-- [ ] add note about escape to pause in the endscreen maybe?
-- [ ] add a popup with how to in bottom right with a question mark and a modal?
+- [ ] Log more analytic data about people
+- [ ] Improve the style
+- [ ] Add a blog
+- [ ] Add a dark mode toggle
+- [ ] Make it so that the guys behind the div give you more points
+- [ ] Add powerups and other possible points (maybe if you shoot squares behind the div)
+- [ ] Press any key to continue
+- [ ] Add note about escape to pause in the endscreen maybe?
+- [ ] Add a popup with how to in bottom right with a question mark and a modal?
+- [ ] SEO
+- [ ] use using requestAnimationFrame for smoother animations in updateGame
