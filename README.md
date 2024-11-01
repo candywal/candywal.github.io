@@ -13,3 +13,16 @@ TODO:
 - [ ] Add a popup with how to in bottom right with a question mark and a modal?
 - [ ] SEO
 - [ ] use using requestAnimationFrame for smoother animations in updateGame
+
+
+-----
+
+Unsure how much I'm going to change the above, will look into it later. But shower thought on how site should change: 
+- better pic
+- have a decent bio
+- have a what i'm doing rn section
+- blogs should probably be on some sort of sharing site
+- maybe start making more youtube videos/streams
+- stream on which platform
+- make the entire page a single page
+- spend time revamping (maybe around first week december)
