@@ -14,6 +14,8 @@ TODO:
 - [ ] SEO
 - [ ] use using requestAnimationFrame for smoother animations in updateGame
 
+the above todos are LIES! LIES! They are dumb todos; need to fix.
+
 
 -----
 

@@ -162,6 +162,8 @@ function initGame() {
         game.gameOver = false;
         document.getElementById('game-ui').style.display = 'none';
         document.getElementById('game-over').style.display = 'none';
+        document.querySelector('.initial-controls').style.display = 'block';
+        document.querySelector('.active-controls').style.display = 'none';
         ctx.clearRect(0, 0, canvas.width, canvas.height);
     }
 
@@ -174,6 +176,8 @@ function initGame() {
         if (!game.gameStarted) {
             game.gameStarted = true;
             document.getElementById('game-ui').style.display = 'block';
+            document.querySelector('.initial-controls').style.display = 'none';
+            document.querySelector('.active-controls').style.display = 'block';
             gameLoop();
         }
 
