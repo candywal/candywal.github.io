@@ -1,5 +1,5 @@
-const email = 'kanshul45+w@gmail.com';
-document.getElementById('email').innerHTML = `<a href="mailto:${email}">${email}</a>`;
+// const email = 'kanshul45+w@gmail.com';
+// document.getElementById('email').innerHTML = `<a href="mailto:${email}">${email}</a>`;
 
 // Game logic
 function initGame() {

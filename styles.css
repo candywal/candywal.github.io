@@ -217,7 +217,7 @@ kbd {
 .links {
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 0px;
 }
 
 .links a[href="/blog.html"] {
@@ -234,4 +234,34 @@ kbd {
 #email a:hover {
     color: #6c5448;
     text-decoration: underline;
+}
+
+.contact-links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.feedback-link {
+    color: #8E6E5D;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.feedback-link:hover {
+    color: #6c5448;
+    text-decoration: underline;
+}
+
+.reachout{
+    color: #8E6E5D;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    text-decoration: underline;
+}
+
+.reachout:hover {
+    color: #6c5448;
+    
 }
