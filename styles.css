@@ -8,6 +8,17 @@ body, html {
     color: #8E9F8C;
 }
 
+#bio-text {
+    display: block;
+    color: #707070;
+    margin-top: -0.5rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.4;
+    max-width: 700px;
+    text-align: justify;
+    text-align-last: start
+}
+
 #game-container {
     position: fixed;
     top: 0;
