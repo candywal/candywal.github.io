@@ -32,7 +32,8 @@ function initGame() {
         enemySpawnInterval: 1000,
         lastLevelUp: 0,
         levelUpInterval: 30000,
-        gameStarted: false
+        gameStarted: false,
+        lastTime: 0
     };
 
     function drawPlayer() {
@@ -63,19 +64,19 @@ function initGame() {
         });
     }
 
-    function updateGame() {
+    function updateGame(deltaTime) {
         // Move player
         if (game.player.movingLeft) {
-            game.player.x = Math.max(0, game.player.x - game.player.speed * (1/60));
+            game.player.x = Math.max(0, game.player.x - game.player.speed * deltaTime);
         }
         if (game.player.movingRight) {
-            game.player.x = Math.min(canvas.width - game.player.width, game.player.x + game.player.speed * (1/60));
+            game.player.x = Math.min(canvas.width - game.player.width, game.player.x + game.player.speed * deltaTime);
         }
         if (game.player.movingUp) {
-            game.player.y = Math.max(canvas.height * 0.75, game.player.y - game.player.speed * (1/60));
+            game.player.y = Math.max(canvas.height * 0.75, game.player.y - game.player.speed * deltaTime);
         }
         if (game.player.movingDown) {
-            game.player.y = Math.min(canvas.height - game.player.height, game.player.y + game.player.speed * (1/60));
+            game.player.y = Math.min(canvas.height - game.player.height, game.player.y + game.player.speed * deltaTime);
         }
 
         // Move bullets
@@ -85,8 +86,9 @@ function initGame() {
         game.bullets = game.bullets.filter(bullet => bullet.y > 0);
 
         // Move enemies
+        const baseSpeed = 120; // pixels per second (adjust as needed)
         game.enemies.forEach(enemy => {
-            enemy.y += 2 + (game.level - 1) * 0.5;
+            enemy.y += (baseSpeed + (game.level - 1) * 30) * deltaTime;
         });
         game.enemies = game.enemies.filter(enemy => enemy.y < canvas.height);
 
@@ -142,14 +144,18 @@ function initGame() {
         document.getElementById('lives').textContent = `${'❤️'.repeat(game.lives)}`;
     }
 
-    function gameLoop() {
+    function gameLoop(timestamp) {
+        if (!game.lastTime) game.lastTime = timestamp;
+        const deltaTime = (timestamp - game.lastTime) / 1000; // Convert to seconds
+        game.lastTime = timestamp;
+
         if (!game.gameOver && game.gameStarted) {
             ctx.clearRect(0, 0, canvas.width, canvas.height);
             drawPlayer();
             drawBullets();
             drawEnemies();
             drawExplosions();
-            updateGame();
+            updateGame(deltaTime);  // Pass deltaTime to updateGame
             requestAnimationFrame(gameLoop);
         } else if (game.gameOver) {
             document.getElementById('game-over').style.display = 'block';
