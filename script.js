@@ -1,6 +1,5 @@
-// Simple email obfuscation with styled link
 const email = 'kanshul45+w@gmail.com';
-document.getElementById('email').innerHTML = `<a href="mailto:${email}" style="color: #5A6B58; text-decoration: none; border-bottom: 1px solid #5A6B58; padding-bottom: 2px;">${email}</a>`;
+document.getElementById('email').innerHTML = `<a href="mailto:${email}">${email}</a>`;
 
 // Game logic
 function initGame() {

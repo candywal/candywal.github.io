@@ -4,11 +4,11 @@ body, html {
     font-family: Arial, sans-serif;
     height: 100%;
     overflow: hidden;
-    background-color: #a6dbaf;
+    background-color: #bee0c4;
     color: #70a86a;
 }
 
-#bio-text {
+#bio-text   {
     display: block;
     color: #707070;
     margin-top: -0.5rem;
@@ -222,4 +222,16 @@ kbd {
 
 .links a[href="/blog.html"] {
     margin-left: auto;
+}
+
+#email a {
+    color: #8E6E5D;
+    text-decoration: none;
+    transition: color 0.3s ease;
+
+}
+
+#email a:hover {
+    color: #6c5448;
+    text-decoration: underline;
 }
