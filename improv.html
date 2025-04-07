@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>~*~*~WEDNESDAY NIGHT IMPROV~*~*~</title>
+    <style>
+        body {
+            background-image: url('https://media.giphy.com/media/R8bcfuGTZONyw/giphy.gif');
+            font-family: "Comic Sans MS", cursive, sans-serif;
+            color: #FF00FF;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .container {
+            width: 800px;
+            margin: 0 auto;
+            background-color: rgba(0, 0, 0, 0.7);
+            border: 5px dashed #00FFFF;
+            padding: 20px;
+        }
+        
+        h1 {
+            font-family: "Impact", fantasy;
+            font-size: 48px;
+            color: yellow;
+            text-shadow: 3px 3px 0 #FF0000, 6px 6px 0 #00FF00;
+            margin-bottom: 10px;
+            animation: rainbow 3s infinite;
+        }
+        
+        @keyframes rainbow {
+            0% {color: red;}
+            14% {color: orange;}
+            28% {color: yellow;}
+            42% {color: green;}
+            56% {color: blue;}
+            70% {color: indigo;}
+            84% {color: violet;}
+            100% {color: red;}
+        }
+        
+        h2 {
+            font-family: "Papyrus", fantasy;
+            color: lime;
+            text-shadow: 2px 2px #000000;
+        }
+        
+        .blink {
+            animation: blinker 1s linear infinite;
+        }
+        
+        @keyframes blinker {
+            50% { opacity: 0; }
+        }
+        
+        .marquee {
+            background-color: #000000;
+            color: #FFFFFF;
+            padding: 10px;
+            font-family: "Courier New", monospace;
+            font-weight: bold;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+        
+        .marquee span {
+            display: inline-block;
+            animation: marquee 15s linear infinite;
+        }
+        
+        @keyframes marquee {
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
+        }
+        
+        .games-list {
+            background-color: #FFFFFF;
+            color: #000000;
+            font-family: "Times New Roman", serif;
+            padding: 10px;
+            margin: 20px 0;
+            text-align: left;
+            border: 3px solid #FF0000;
+            height: 200px;
+            overflow-y: scroll;
+        }
+        
+        .games-list h3 {
+            text-align: center;
+            font-family: "Arial Black", sans-serif;
+            color: #FF0000;
+        }
+        
+        .rsvp {
+            background-color: #FF0000;
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 15px;
+            border: 3px solid #FFFF00;
+        }
+        
+        .rsvp a {
+            font-size: 24px;
+            color: #FFFFFF;
+            text-decoration: none;
+            font-weight: bold;
+            background-color: #00FF00;
+            padding: 10px 20px;
+            border-radius: 10px;
+            border: 3px solid #000000;
+        }
+        
+        .rsvp a:hover {
+            background-color: #FFFF00;
+            color: #000000;
+        }
+        
+        .meme-container {
+            display: flex;
+            justify-content: space-around;
+            margin: 20px 0;
+        }
+        
+        .meme {
+            border: 5px ridge #FFFFFF;
+            margin: 5px;
+        }
+        
+        .visitor-counter {
+            font-family: "Digital", monospace;
+            background-color: #000000;
+            color: #00FF00;
+            padding: 5px;
+            width: 150px;
+            margin: 20px auto;
+            border: 2px solid #00FF00;
+        }
+        
+        .under-construction {
+            text-align: center;
+            margin: 20px 0;
+        }
+        
+        .back-link {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #000080;
+            display: inline-block;
+        }
+        
+        .back-link a {
+            color: #FFFFFF;
+            text-decoration: none;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>WEDNESDAY NIGHT IMPROV!!1!</h1>
+        
+        <div class="marquee">
+            <span>***COME JOIN US EVERY WEDNESDAY FOR IMPROV FUN!! NO EXPERIENCE REQUIRED!! BRING YOUR FRIENDS!! PROBABLY NO FREE PIZZA!!***</span>
+        </div>
+        
+        <img src="https://media.giphy.com/media/KBfKueAjjJuCsngxmN/giphy.gif" alt="Improv GIF" width="300">
+        
+        <h2 class="blink">~*~*~WEDNESDAY NIGHTS @ 8PM~*~*~</h2>
+        
+        <div class="games-list">
+            <h3>SUPER AWESOME IMPROV GAMES WE PLAY:</h3>
+            <ul>
+                hi, we play  <a href="https://improvencyclopedia.org/games/" target="_blank">improv games</a> on wednesday nights in berkeley. much fun. <br> <br>
+
+                <li>Party Quirks</li>
+                <li>Freeze Tag</li>
+                <li>Alphabet Game</li>
+                <li>World's Worst</li>
+                <li>Scenes From a Hat</li>
+                <li>Props</li>
+                <li>Irish Drinking Song</li>
+                <li>Story Story Die</li>
+                <li>Three-headed Expert</li>
+                <li>The Dating Game</li>
+                <li>Questions Only</li>
+                <li>Whose Line?</li>
+                <li>Director</li>
+                <li>Foreign Film Dub</li>
+                <li>Sound Effects</li>
+                <li>One Word at a Time</li>
+                <li>Yes, And</li>
+                <li>Emotion Party</li>
+                <li>Celebrity Hot Seat</li>
+                <li>Zip Zap Zop</li>
+                <li>Gibberish</li>
+                <li>Two Truths and a Lie</li>
+            </ul>
+        </div>
+        
+        <div class="meme-container">
+            <img class="meme" src="https://i.kym-cdn.com/photos/images/original/000/096/044/trollface.jpg" alt="Troll Face" width="150">
+            <img class="meme" src="https://i.kym-cdn.com/photos/images/newsfeed/001/727/135/8e6" alt="Success Kid" width="150">
+            <img class="meme" src="https://i.kym-cdn.com/photos/images/newsfeed/000/052/614/likeaboss.jpg" alt="Like a Boss" width="150">
+        </div>
+        
+        <div class="rsvp">
+            <h2>WANNA JOIN THE FUN??</h2>
+            <p>DM, email, or reach out to ANSHUL for the address!</p>
+            <a href="#" class="blink" onclick="alert('email me at kanshul45+improv@gmail.com'); return false;">CONTACT ANSHUL FOR ADDRESS & RSVP</a>
+        </div>
+        
+        <div class="visitor-counter">
+            <div>VISITORS: 42069</div>
+        </div>
+        
+        <div class="under-construction">
+            <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExbWw2ZDIyNXJpODh2cWRqaWd6b2d6OW1jYmw1M3Boa3g3ZXJ4bWl4eSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3ohs4gSs3V4Qplm6fC/giphy.gif" alt="Under Construction" width="200">
+        </div>
+        
+        <div class="back-link">
+            <a href="index.html">← BACK TO MY WEBSITE</a>
+        </div>
+    </div>
+    
+</body>
+</html> 
