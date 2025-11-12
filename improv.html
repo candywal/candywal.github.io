@@ -156,9 +156,79 @@
             text-decoration: none;
             font-weight: bold;
         }
+        
+        .discontinued-banner {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            width: 150%;
+            background: repeating-linear-gradient(
+                45deg,
+                #FF0000,
+                #FF0000 40px,
+                #000000 40px,
+                #000000 80px
+            );
+            color: #FFFF00;
+            font-family: "Impact", fantasy;
+            font-size: 48px;
+            text-align: center;
+            padding: 30px 20px;
+            z-index: 9999;
+            border: 8px solid #FFFF00;
+            box-shadow: 0 0 40px rgba(255, 0, 0, 0.8), inset 0 0 20px rgba(0, 0, 0, 0.5);
+            transform: translate(-50%, -50%) rotate(-15deg);
+            animation: flash-banner 0.5s infinite;
+            text-shadow: 3px 3px 0 #000000, -1px -1px 0 #000000, 1px -1px 0 #000000, -1px 1px 0 #000000;
+        }
+        
+        @keyframes flash-banner {
+            0%, 49% { 
+                color: #FFFF00;
+                border-color: #FFFF00;
+            }
+            50%, 100% { 
+                color: #FFFFFF;
+                border-color: #FFFFFF;
+            }
+        }
+        
+        .close-banner {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background-color: #FFFF00;
+            color: #000000;
+            border: 4px solid #000000;
+            font-size: 28px;
+            font-weight: bold;
+            width: 50px;
+            height: 50px;
+            cursor: pointer;
+            border-radius: 50%;
+            font-family: "Arial Black", sans-serif;
+            box-shadow: 0 0 15px #FFFF00, 0 4px 8px rgba(0, 0, 0, 0.5);
+            line-height: 40px;
+        }
+        
+        .close-banner:hover {
+            background-color: #00FF00;
+            color: #000000;
+            border-color: #FFFFFF;
+            transform: scale(1.1);
+        }
+        
+        .banner-hidden {
+            display: none;
+        }
     </style>
 </head>
 <body>
+    <div id="discontinuedBanner" class="discontinued-banner">
+        ⚠️ NOT RUNNING ANYMORE ⚠️
+        <button class="close-banner" onclick="closeBanner()">✕</button>
+    </div>
+    
     <div class="container">
         <h1>WEDNESDAY NIGHT IMPROV!!1!</h1>
         
@@ -225,5 +295,10 @@
         </div>
     </div>
     
+    <script>
+        function closeBanner() {
+            document.getElementById('discontinuedBanner').classList.add('banner-hidden');
+        }
+    </script>
 </body>
 </html> 
