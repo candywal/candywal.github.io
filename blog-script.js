@@ -28,18 +28,17 @@
 const blogPosts = [];  
 
 function createBlogPost(post) {
-    const blogPost = document.createElement('div');
+    const blogPost = document.createElement('a');
     blogPost.className = 'blog-post';
+    blogPost.href = `https://${post.link}`;
+    blogPost.target = '_blank';
+    blogPost.rel = 'noopener noreferrer';
     blogPost.innerHTML = `
         <h2>${post.title}</h2>
         <div class="date">${post.date}</div>
         <p class="description">${post.description}</p>
     `;
-    
-    blogPost.addEventListener('click', function() {
-        window.open(`https://${post.link}`, '_blank', 'noopener,noreferrer');
-    });
-    
+
     return blogPost;
 }
 
@@ -49,7 +48,7 @@ function renderBlogPosts() {
     if (blogPosts.length === 0) {
         const message = document.createElement('p');
         message.className = 'empty-blog-message';
-        message.innerHTML = '"i will post something soon" - Anshul circa 400BC';
+        message.textContent = '"i will post something soon" - Anshul circa 400BC';
         blogGrid.appendChild(message);
         return;
     }

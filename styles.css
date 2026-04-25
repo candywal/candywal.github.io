@@ -2,10 +2,18 @@ body, html {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-    height: 100%;
-    overflow: hidden;
+    min-height: 100%;
     background-color: #b8d5bd;
     color: #70a86a;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body.home-page {
+    min-height: 100vh;
+    overflow: hidden;
 }
 
 #bio-text   {
@@ -57,8 +65,7 @@ body, html {
     top: 50%;
     left: 5%;
     transform: translateY(-50%);
-    width: auto;
-    min-width: 600px;
+    width: min(90vw, 900px);
     max-width: 900px;
     z-index: 2;
     background-color: rgba(207, 219, 209, 0.9);
@@ -128,12 +135,20 @@ p {
 }
 
 @media (max-width: 900px) {
+    body.home-page {
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
+
     #content {
-        left: 50%;
-        transform: translate(-50%, -50%);
+        position: relative;
+        top: auto;
+        left: auto;
+        transform: none;
+        margin: 7rem auto 2rem;
         padding: 1.25rem;
-        width: 95%;
-        min-width: unset;
+        width: calc(100vw - 2rem);
+        max-width: 38rem;
     }
 
     #profile-pic-container {
@@ -142,9 +157,14 @@ p {
     }
 
     h1 {
-        font-size: 2.4rem;
+        font-size: clamp(1.5rem, 7vw, 1.9rem);
         text-align: center;
         white-space: normal;
+        overflow-wrap: anywhere;
+    }
+
+    #bio-text {
+        text-align: left;
     }
 
     p {
@@ -153,12 +173,20 @@ p {
 
     .links {
         text-align: center;
+        flex-wrap: wrap;
+        justify-content: center;
     }
 
     .links a {
         font-size: 1rem;
         margin-bottom: 0.5rem;
         display: inline-block;
+    }
+}
+
+@media (max-width: 600px), (hover: none) and (pointer: coarse) {
+    #game-controls {
+        display: none;
     }
 }
 
@@ -224,16 +252,10 @@ kbd {
     margin-left: auto;
 }
 
-#email a {
-    color: #8E6E5D;
-    text-decoration: none;
-    transition: color 0.3s ease;
-
-}
-
-#email a:hover {
-    color: #6c5448;
-    text-decoration: underline;
+@media (max-width: 900px) {
+    .links a[href="/blog.html"] {
+        margin-left: 0;
+    }
 }
 
 .contact-links {
@@ -247,6 +269,8 @@ kbd {
     color: #8E6E5D;
     text-decoration: none;
     transition: color 0.3s ease;
+    margin-top: -1rem;
+    font-size: 1em;
 }
 
 .feedback-link:hover {
